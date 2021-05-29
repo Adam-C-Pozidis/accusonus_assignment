@@ -1,2 +1,41 @@
-<h1>Audios#index</h1>
-<p>Find me in app/views/audios/index.html.erb</p>
+
+<div class="row">
+<% @audios.each do |audio| %>
+    <div class="col-4 text-center">
+
+        <div>
+            <div class="">
+                <%=cl_video_tag(audio.video.key, :resource_type=>"video", :controls=> true) %>
+            </div>
+
+            <div class="">
+                <%= cl_image_tag(audio.video.key, :resource_type=>"video", :transformation=>[
+                    {:height=>50, :width=>300, :crop=>"scale"},
+                    {:background=>"#385170", :color=>"#9fd3c7", :flags=>"waveform"}
+                    ])%>
+            </div>
+
+            <%= audio.name %>
+        </div>
+    </div>
+<% end %>
+</div>
+
+<br>
+<br>
+<h1> Upload your own audio file </h1>
+<br>
+<br>
+<div class="container">
+<%= simple_form_for(@audio) do |f| %>
+    <div class="form-inputs">
+        <%= f.input :name %>
+        <%= f.input :video, as: :file %>
+
+    </div>
+
+    <div class="form-actions">
+    <%= f.button :submit %>
+    </div>
+<% end %>
+</div>
