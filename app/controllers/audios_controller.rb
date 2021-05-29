@@ -21,16 +21,18 @@ class AudiosController < ApplicationController
     end
   end
 
-  def edit
+
+  def destroy
+    @audio.destroy
+    redirect_to root_path
   end
 
+  private
+  def set_audio
+    @audio = Audio.find(params[:id])
+  end
 
-    private
-    def set_audio
-      @audio = Audio.find(params[:id])
-    end
-
-    def audio_params
-      params.require(:audio).permit(:name, :video)
-    end
+  def audio_params
+    params.require(:audio).permit(:name, :video)
+  end
 end

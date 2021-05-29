@@ -1,3 +1,10 @@
 @import "bootstrap/scss/bootstrap";
 
-body { background-color: #ececec;}
+
+body { background-color: #ececec;
+    color: #142d4c;
+}
+
+#card {
+    border-radius: 5px;
+}
