@@ -5,12 +5,11 @@
 
             <div>
                 <div class="card" style="background-image: url('<%= cl_image_path(audio.video.key, :resource_type=>'video', :transformation=>[
-                        {:height=>180, :width=>2500,:crop=>'scale'},
-                        {:background=>'#385170', :color=>'#9fd3c7', :flags=>'waveform'}
-                        ])%>')">
+                    {:height=>180, :width=>2500,:crop=>'scale'},
+                    {:background=>'#385170', :color=>'#9fd3c7', :flags=>'waveform'}
+                    ])%>')">
                     <%=cl_video_tag(audio.video.key, :resource_type=>"video", :controls=> true) %>
                 </div>
-
                 <h2><%= audio.name %> </h2>
             </div>
             <div>

@@ -8,6 +8,24 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 
-Rails.start()
-Turbolinks.start()
-ActiveStorage.start()
+// import WaveSurfer from 'wavesurfer.js';
+
+// Rails.start()
+// Turbolinks.start()
+// ActiveStorage.start()
+
+
+// var erbCalling = function erbCalling (x){
+//     setTimeout(waveSurferCreate, 1000);
+
+//     function waveSurferCreate(){
+//         var wavesurfer = WaveSurfer.create({
+//             container: '#waveform',
+//             backend: 'MediaElement',
+//             mediaControls: true
+//         });
+//         wavesurfer.load(x);
+//     }
+// }
+
+// erbCalling();
