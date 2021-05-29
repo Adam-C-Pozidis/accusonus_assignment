@@ -10,9 +10,9 @@ import "channels"
 
 // import WaveSurfer from 'wavesurfer.js';
 
-// Rails.start()
-// Turbolinks.start()
-// ActiveStorage.start()
+Rails.start()
+Turbolinks.start()
+ActiveStorage.start()
 
 
 // var erbCalling = function erbCalling (x){
